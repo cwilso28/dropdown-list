@@ -1,0 +1,12 @@
+* {
+  /* border: 0px; */
+  margin: 0px;
+  padding: 0px;
+}
+button {
+  width: 25px;
+  height: 25px;
+  background-size: 10px;
+  /* background-position: center; */
+
+}
