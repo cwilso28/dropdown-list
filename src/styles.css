@@ -13,3 +13,7 @@ button {
   background-image: url('./menu.svg')
 
 }
+
+#dropdown-list {
+  display: none;
+}
