@@ -1,3 +1,4 @@
+import { el } from "date-fns/locale";
 import "./styles.css"
 
 function createGreyBackground() {
@@ -15,8 +16,47 @@ function createGreyBackground() {
 
 function insertElement (element, position) {
     let body = document.querySelector("body");
-    body.append(element);
+    body.insertBefore(element, position);
 }
 
-let greyBackgroundContainer = createGreyBackground();
-insertElement(greyBackgroundContainer);
+function showElement (id) {
+    let element = document.getElementById(id);
+    element.style.display = "block";
+    element.style.position = "absolute";
+    element.style.backgroundColor = "white";
+}
+
+function hideElement (id) {
+    let element = document.getElementById(id);
+    element.style.display = "none";
+}
+
+function deleteElement (id) {
+    let element = document.getElementById(id);
+    element.remove();
+}
+
+function showDropdown () {
+    let list = document.getElementById("dropdown-list");
+    let greyBackgroundContainer = createGreyBackground();
+    insertElement(greyBackgroundContainer, list);
+    showElement("dropdown-list");
+
+    let greyBackground = document.getElementById("grey-background");
+    greyBackground.addEventListener("click", function() {
+    hideDropdown();
+})
+}
+
+function hideDropdown () {
+    hideElement("dropdown-list");
+    deleteElement("grey-background");
+}
+
+let button = document.getElementById("dropdown-button");
+button.addEventListener("click", function() {
+    showDropdown();
+})
+
+
+
