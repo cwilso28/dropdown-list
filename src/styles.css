@@ -2,6 +2,7 @@
   /* border: 0px; */
   margin: 0px;
   padding: 0px;
+  border: solid 1px black;
 }
 button {
   width: 25px;
@@ -16,4 +17,12 @@ button {
 
 #dropdown-list {
   display: none;
+}
+
+/* #dropdown-list > li {
+  background-color: white;
+} */
+
+li:hover {
+  background-color: red;
 }
