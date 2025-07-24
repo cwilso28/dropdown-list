@@ -23,7 +23,9 @@ function showElement (id) {
     let element = document.getElementById(id);
     element.style.display = "block";
     element.style.position = "absolute";
-    element.style.backgroundColor = "white";
+    element.style.top = "-100%";
+    element.style.animation = "slide 0.2s forwards";
+    // element.style.animationDelay = "2s";
 }
 
 function hideElement (id) {
@@ -37,9 +39,9 @@ function deleteElement (id) {
 }
 
 function showDropdown () {
-    let list = document.getElementById("dropdown-list");
+    let wrapper = document.getElementById("wrapper");
     let greyBackgroundContainer = createGreyBackground();
-    insertElement(greyBackgroundContainer, list);
+    insertElement(greyBackgroundContainer, wrapper);
     showElement("dropdown-list");
 
     let greyBackground = document.getElementById("grey-background");

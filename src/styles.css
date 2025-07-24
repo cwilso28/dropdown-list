@@ -2,7 +2,11 @@
   /* border: 0px; */
   margin: 0px;
   padding: 0px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
+}
+
+body {
+  margin: 5px;
 }
 button {
   width: 25px;
@@ -17,6 +21,7 @@ button {
 
 #dropdown-list {
   display: none;
+  background-color: white;
 }
 
 /* #dropdown-list > li {
@@ -25,4 +30,20 @@ button {
 
 li:hover {
   background-color: red;
+}
+
+#wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  /* border: solid 1px black; */
+}
+
+/* @-webkit-keyframes slide {
+  100% {top: 0px;}
+} */
+
+@keyframes slide {
+  100% {top: 0px;}
 }
